@@ -15,3 +15,5 @@ echo hello world
 #\e[0m to disable the color
 
 echo -e "\e[31mAMRIT\e[32mPAUL\e[33mSINGH\e[0m"
+
+echo -e "\e[1;31mAMRIT\e[1;32mPAUL\e[1;33mSINGH\e[0m"
