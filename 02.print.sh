@@ -24,6 +24,6 @@ echo -e "\e[1;31mAMRIT\e[1;32mPAUL\e[1;33mSINGH\e[0m"
 
 # new tab   \t
 
-echo -e Amrit\ndoad
+echo -e "Amrit\ndoad"
 
-echo -e Amrit\tdoad
+echo -e "Amrit\tdoad"
