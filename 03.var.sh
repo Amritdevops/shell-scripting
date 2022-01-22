@@ -19,4 +19,8 @@ echo good morning today is $date
 exp1=$((2+2-5/2*3))
 echo expression output is $exp1
 
+# local variable
+echo course name is $course_name
+
+
 
