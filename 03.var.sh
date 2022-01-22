@@ -14,3 +14,9 @@ echo today date is $date
 
 date=$(date +%F)
 echo good morning today is $date
+
+# arithmatic subsitution
+exp1=$((2+2-5/2*3))
+echo expression output is $exp1
+
+
