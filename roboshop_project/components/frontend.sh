@@ -39,7 +39,7 @@ echo copy content to nginx location
 cp -r frontend-main/static/* /usr/share/nginx/html/ &>>$LOG_FILE
 
 echo copy nginx roboshop config
-cp frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf
+cp frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG_FILE
 
 echo start nginx service
 systemctl enable nginx &>>$LOG_FILE
