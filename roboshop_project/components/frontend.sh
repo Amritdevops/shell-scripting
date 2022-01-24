@@ -32,7 +32,19 @@ echo   clean old content
 rm -rf /usr/share/nginx/html/*
 
 echo extract frontend content
-cd /usr/share/nginx/html/
-unzip /tmp/frontend.zip &>>$LOG_FILE
+cd /tmp
+unzip /frontend.zip &>>$LOG_FILE
+
+echo copy content to nginx location
+cp -r frontend-main/static/* /usr/share/nginx/html/ &>>$LOG_FILE
+
+echo copy nginx roboshop config
+cp frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf
+
+echo start nginx service
+systemctl enable nginx &>>$LOG_FILE
+systemctl start nginx &>>$LOG_FILE
+
+
 
 
