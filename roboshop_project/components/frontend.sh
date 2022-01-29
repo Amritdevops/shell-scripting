@@ -26,10 +26,11 @@ source component/common.sh
 
 echo installing nginx
 yum install nginx -y &>>$LOG_FILE
+echo "download front end"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
 
 echo   clean old content
-rm -rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
 
 echo extract frontend content
 cd /tmp
