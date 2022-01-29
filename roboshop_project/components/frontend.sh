@@ -22,7 +22,7 @@
 #
 #```
 ## systemctl restart nginx
-source component/common.sh
+source components/common.sh
 
 echo installing nginx
 yum install nginx -y &>>$LOG_FILE
