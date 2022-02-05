@@ -23,6 +23,8 @@
 #```
 ## systemctl restart nginx
 
+yum install nginx -y
+
 
 
 
