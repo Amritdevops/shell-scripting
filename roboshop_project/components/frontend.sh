@@ -26,10 +26,10 @@ echo "installing frontend"
 
 rm -f /tmp/roboshop.log
 
-yum install nginx -y >>/tmp/roboshop.log
+yum install nginx -y &>>/tmp/roboshop.log
 
 echo "download frontend content"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >>/tmp/roboshop.log
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>/tmp/roboshop.log
 
 
 
