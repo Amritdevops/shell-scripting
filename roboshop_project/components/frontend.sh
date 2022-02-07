@@ -24,6 +24,8 @@ echo "installing frontend"
 #```
 ## systemctl restart nginx
 
+rm -f /tmp/roboshop.log
+
 yum install nginx -y >>/tmp/roboshop.log
 
 echo "download frontend content"
