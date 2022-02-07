@@ -1,4 +1,3 @@
-echo "installing frontend"
 ## yum install nginx -y
 ## systemctl enable nginx
 ## systemctl start nginx
@@ -23,6 +22,7 @@ echo "installing frontend"
 #
 #```
 ## systemctl restart nginx
+echo "installing NGINX"
 LOG_FILE=/tmp/roboshop.log
 rm -f $LOG_FILE
 
