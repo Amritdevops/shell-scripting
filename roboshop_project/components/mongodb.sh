@@ -37,14 +37,8 @@
 ## mongo < catalogue.js
 ## mongo < users.js
 #
-#```
-#
-#Symbol `<` will take the input from a file and give that input to the command.
 source components/common.sh
-echo "  download mongodb repo file"
-bash curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo &>>$LOG_FILE
 
-echo "install mongodb"
-yum install -y mongodb-org &>>$LOG_FILE
-
+echo "download mongodb repo file"
+curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo &>>$LOG_FILE
 
