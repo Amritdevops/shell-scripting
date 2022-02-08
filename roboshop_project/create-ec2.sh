@@ -7,3 +7,5 @@ if [ -z "${AMI_ID}" ]; then
 else
   echo "AMI_ID = ${AMI_ID}"
 fi
+
+aws ec2 run-instances ----image-id $AMI_ID --instance-type t3.micro --output text
