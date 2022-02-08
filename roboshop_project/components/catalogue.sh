@@ -56,7 +56,19 @@ echo "install nodejs dependencies"
 cd /home/roboshop/catalogue &>>$LOG_FILE
 npm install &>>$LOG_FILE
 
-chown roboshop:roboshop /home/roboshop/ -R
+echo "change user"
+chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
+
+echo " update ip address in systemd file"
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
+
+echo "setup catalogue systemd file"
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
+
+echo "start catalogue"
+systemctl daemon-reload &>>$LOG_FILE
+systemctl enable catalogue &>>$LOG_FILE
+systemctl start catalogue &>>$LOG_FILE
 
 
 
