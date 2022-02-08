@@ -2,6 +2,7 @@
 
 INSTANCE_NAME=$1
 if [ -z "S{INSTANCE_NAME}"]; then
+  echo -e "\e[1;33mInstance name argument is needed\e[0m"
   exit
 fi
 
