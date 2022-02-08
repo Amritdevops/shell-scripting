@@ -6,3 +6,4 @@ if [ -z "${AMI_ID}"]; then
   echo "unable to find the Image AMI ID"
 else
   echo "AMI_ID = ${AMI_ID}"
+fi
