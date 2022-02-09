@@ -26,7 +26,7 @@ echo "installing NGINX"
 LOG_FILE=/tmp/roboshop.log
 rm -f $LOG_FILE
 
-yum install nginx -y &>>$LOG_FILE
+yum install nginxx -y &>>$LOG_FILE
 if [ $? -eq 0 ]; then
   echo -e "\e[1;32m success\e[0m"
 else
