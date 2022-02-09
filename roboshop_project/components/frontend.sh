@@ -63,7 +63,7 @@ else
 fi
 
 echo "copy extracted content to Nginx path"
-cp -r  frontend-main/static/* usr/share/nginx/html &>>$LOG_FILE
+cp -r  frontend-main/static/* /usr/share/nginx/html/ &>>$LOG_FILE
 if [ $? -eq 0 ]; then
   echo -e "\e[1;32m success\e[0m"
 else
