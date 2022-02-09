@@ -27,6 +27,12 @@ LOG_FILE=/tmp/roboshop.log
 rm -f $LOG_FILE
 
 yum install nginx -y &>>$LOG_FILE
+if [ $? -eq 0 ]; then
+  echo -e "\e[1;32m success\e[0m"
+else
+  echo -e "\e[1;33m failed\e[0m"
+  exit
+fi
 
 echo "download frontend content"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
