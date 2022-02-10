@@ -22,10 +22,9 @@
 #
 #```
 ## systemctl restart nginx
-echo "installing NGINX"
-LOG_FILE=/tmp/roboshop.log
-rm -f $LOG_FILE
+source components/common.sh
 
+echo "installing NGINX"
 yum install nginx -y &>>$LOG_FILE
 STAT $?
 
